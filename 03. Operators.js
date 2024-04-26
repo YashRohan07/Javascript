@@ -93,11 +93,28 @@ let precedence = (10 + 5) * 2 / 3 - 4;
 console.log(precedence); // Output: 6
 
 
-//The Nullish coalescing assignment operator is used between two values.
-//If the first value is undefined or null, the second value is assigned.
-let nb;  
+
+/*
+The ??= operator is the nullish coalescing assignment operator.
+It assigns the value on its right-hand side to the variable on its left-hand side only if the variable on the left-hand side is null or undefined.
+If the variable on the left-hand side already has a value (even if it is false, like 0 or an empty string), it won't be reassigned.
+*/
+
+// If nb is currently undefined or null, set nb to 5.
+let nb;
 nb ??= 5;
-//The variable nb is initially undefined, so the right-hand side value 5 is assigned to nb.
+console.log(nb); // Output: 5
+// Since nb is initially undefined, it's set to 5.
+
+
+let variable = null;
+variable ??= "new value";
+console.log(variable); // Output: "new value"
+
+
+let text = "";  //Empty String
+text ??= "Hello, World!";
+console.log(text); // Output: ""
 
 
 
